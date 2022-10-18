@@ -12,6 +12,41 @@ mutation login ($email:String!, $password:String!){
     }
 }
 `;
+export const DELETE_BOOK = gql`
+  mutation removeBook($bookId: ID!) {
+    removeBook(bookId: $bookId) {
+         _id
+         username
+         email
+         savedBooks{
+             authors
+             bookId
+             image
+             title
+             description
+            link
+         }
+     }
+    }
+`;
+
+export const SAVE_BOOK = gql`
+    mutation saveBook($body: SavedBookInput) {
+      saveBook(body: $body) {
+        _id
+        username
+        email
+        savedBooks {
+          authors
+          description
+          title
+          bookId
+          image
+          link
+        }
+      }
+    }
+`
 
 export const ADD_USER = gql`
   mutation addUser($username: String!, $password: String!) {
@@ -33,37 +68,4 @@ export const ADD_USER = gql`
     }
 `;
 
-export const SAVE_BOOK = gql`
-  mutation saveBook($bookId:ID!) {
-    saveBook(savedBook: $bookId) {
-         _id
-         username
-         email
-         savedBooks{
-             authors
-             bookId
-             image
-             title
-             description
-         }
-     }
-    }
-`;
 
-export const DELETE_BOOK = gql`
-  mutation removeBook($bookId: ID!) {
-    removeBook(bookId: $bookId) {
-         _id
-         username
-         email
-         avedBooks{
-             authors
-             bookId
-             image
-             title
-             description
-            link
-         }
-     }
-    }
-`;
