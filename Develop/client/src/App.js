@@ -40,7 +40,7 @@ function App() {
     
       <>
         <Navbar />
-        {/* <Routes>
+        <Routes>
           <Route 
             path='/' 
             element={<SearchBooks />} 
@@ -53,7 +53,7 @@ function App() {
             path='*'
             element={<h1 className='display-2'>Wrong page!</h1>}
           />
-        </Routes> */}
+        </Routes>
       </>
     </Router>
     </ApolloProvider>
