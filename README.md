@@ -11,7 +11,7 @@ Once the terminal gives you the "server Connected on localhost:3001" you can run
 * `Test query and mutations in sandbox to get user id information and to create users`
 * `Open website and login using the username and password created in sandbox`
 
-# Screenshot of the app
+# Screenshot of app
 ![Image of app](./Assets/MERN%20BOOKSEARCH.png)
 
 # Video Walk through 
